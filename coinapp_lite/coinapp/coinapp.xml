@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--##########################################################-->
+<!--#### Welcome to Coinapp XML custom configuration #########-->
+<!--#### To apply other the xml configuration to the app #####-->
+<!--#### just remove the xml commneting bellow. ##############-->
+<!--##########################################################-->
+
+<configuration name="coinapp">
+  
+  <sessions>
+    
+    <InsertCoin>PLEASE INSERT A COIN</InsertCoin>
+    
+    <TimeIn>TIME COUNTING</TimeIn>
+    
+    <TimeOut>TIME OUT. INSERT COIN AGAIN</TimeOut>
+    
+    <TimePause>TIME PAUSED</TimePause>
+    
+    <TimeSave>TIME SAVED</TimeSave>
+    
+    <TimeResume>TIME RESUME</TimeResume>
+    
+    <UserLogin>USER LOGIN</UserLogin>
+    
+    <UserLogout>USER HAS BEEN LOGOUT</UserLogout>
+    
+    <AdminLogin>ADMIN LOGIN</AdminLogin>
+    
+    <AdminLogout>ADMIN HAS BEEN LOGOUT</AdminLogout>
+    
+    <Shutdown>SHUTTING DOWN...</Shutdown>
+    
+  </sessions>
+
+  <system>
+
+    <!--[AddLog]
+    summary      : Add system application log file.                                          
+    value: true  : To add system application log. [LogPath] value will use to save the log file.
+    value: false : Disable the logging of the main application.-->
+    <AddLog>true</AddLog>
+
+    <!--[LogPath]
+    summary : The folder directory for saving the system log file.
+    value   :  Full path directory location including the drive. example: c:\Logs
+    default :  The default value will save in the main application directory.-->
+    <LogPath>c:\Logs</LogPath>
+
+    <!--[SafeShutdown] 
+    summary : At startup system will start a 330 seconds (5m:30s) to shutdown the PC if main application fail to start.
+    value   :  number in seconds
+    default :  330 seconds (5 minutes and 30 seconds).-->
+    <SafeShutdown>330</SafeShutdown>
+
+    <!--[ErrorShutdown]
+    summary                  :  If main application process killed by user system will shutdown according to the value given (Open apps and unsave data will loss).
+    value: number in seconds :  System will forcibly restart after a specified number reach 0.
+    value: 0                 :  System will forced restart imidiately-->
+    <ErrorShutdown>60</ErrorShutdown>
+    
+    <!--[ReInitialize]
+    summary :  At windows startup if device fail to initialize system will retry to re-initialize the device.
+    value   :  number in retry
+    default :  3 times-->
+    <ReInitialize>3</ReInitialize>
+
+    
+    <!--[UpdateInterval]
+    summary : Tell the application if there are new software update in administrator session or if you accessed the console window.
+    value   : number in seconds not less than 60.
+    value   : less than 60 is off.
+    default : 60 (check every 60 seconds or 1 minute)-->
+    <UpdateInterval>60</UpdateInterval>
+    
+  </system>
+
+</configuration>
